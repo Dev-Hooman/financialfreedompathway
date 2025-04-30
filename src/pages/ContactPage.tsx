@@ -28,8 +28,14 @@ const ContactPage: React.FC = () => {
     e.preventDefault();
 
     try {
-      await new Promise(resolve => setTimeout(resolve, 1000));
-
+      await fetch('http://localhost:5000/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+      
       setFormData({
         firstName: '',
         lastName: '',
