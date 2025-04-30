@@ -28,7 +28,7 @@ const ContactPage: React.FC = () => {
     e.preventDefault();
 
     try {
-      await fetch('http://localhost:5000/api/contact', {
+      await fetch('https://financialfreedompathway-backend-production.up.railway.app/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
